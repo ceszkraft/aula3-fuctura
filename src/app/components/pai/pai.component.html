@@ -1,0 +1,22 @@
+<div class="sidenav">
+  <div class="login-main-text">
+    <h2>
+      Fuctura<br />
+      Login Page
+    </h2>
+    <p>Acesso ao sistema financeiro Fuctura</p>
+  </div>
+</div>
+<div class="main">
+  <div class="col-md-6 col-sm-12">
+    <div class="login-form">
+      <form>
+        <app-filho [login]="login"></app-filho>
+        <button type="submit" class="btn btn-black" (click)="submit()">
+          Login
+        </button>
+        <button type="submit" class="btn btn-secondary">Register</button>
+      </form>
+    </div>
+  </div>
+</div>
