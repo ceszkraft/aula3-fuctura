@@ -1,0 +1,30 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+      <th scope="col">DELETE</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let obj of employees">
+      <th scope="row">1</th>
+      <td>{{ obj.last_name }}</td>
+      <td>{{ obj.email }}</td>
+      <td>{{ obj.organization }}</td>
+      <td>
+        <button class="btn btn-danger" (click)="delete(obj.id || 0)">
+          DELETE
+        </button>
+        <button
+          class="btn btn-primary"
+          (click)="setUser(obj.first_name, obj.email, obj.id)"
+        >
+          SET
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -9,13 +9,17 @@
 </div>
 <div class="main">
   <div class="col-md-6 col-sm-12">
+    <app-table [employees]="employees" [employee]="employee"></app-table>
+
     <div class="login-form">
       <form>
-        <app-filho [login]="login"></app-filho>
+        <app-filho [employee]="employee"></app-filho>
         <button type="submit" class="btn btn-black" (click)="submit()">
-          Login
+          Criar
         </button>
-        <button type="submit" class="btn btn-secondary">Register</button>
+        <button type="submit" class="btn btn-secondary" (click)="update()">
+          Alterar
+        </button>
       </form>
     </div>
   </div>
